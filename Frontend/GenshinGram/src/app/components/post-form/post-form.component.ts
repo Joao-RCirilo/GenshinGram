@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class PostFormComponent {
 
+
+  selectedFile: any = null;
+
+onFileSelected(event: any): void {
+    this.selectedFile = event.target.files[0] ?? null;
+
+}
+
+onSubmit(){
+
+}
+
 }
