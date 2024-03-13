@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
+import { PostServiceService } from 'src/app/services/post-service.service';
+import { Post } from 'src/app/models/post';
+
 
 @Component({
   selector: 'app-post-form',
@@ -6,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./post-form.component.scss']
 })
 export class PostFormComponent {
-
+  @Input() btnText!: string
 
   selectedFile: any = null;
 
@@ -16,7 +20,7 @@ onFileSelected(event: any): void {
 }
 
 onSubmit(){
-
+  console.log("deu bão")
 }
 
 }

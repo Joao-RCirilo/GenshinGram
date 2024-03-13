@@ -1,16 +1,16 @@
 <mat-card>
   <mat-card-content>
 
-    <form>
+    <form class="form">
       <div class="form-group">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" class="form-field">
           <mat-label>title</mat-label>
           <input matInput type="text" placeholder="insira seu titulo" required>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </div>
       <div class="form-group">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" class="form-field">
           <mat-label>description</mat-label>
           <textarea matInput placeholder="Fale algo sobre sua fotografia" required></textarea>
           <mat-hint>Hint</mat-hint>
@@ -21,13 +21,16 @@
         <input hidden (change)="onFileSelected($event)" #fileInput type="file">
         <span class="file-name">{{selectedFile?.name}}</span>
       </div>
+
+      <div class="actions">
+      <mat-card-actions>
+        <div class="action-buttons">
+        <button mat-button color="primary" (click)="onSubmit()">{{btnText}} </button>
+        <button mat-button routerLink="">CANCELAR</button>
+      </div>
+      </mat-card-actions>
+    </div>
     </form>
-
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="onSubmit()">CADASTRAR </button>
-      <button mat-button routerLink="">CANCELAR</button>
-    </mat-card-actions>
-
   </mat-card-content>
 </mat-card>
 

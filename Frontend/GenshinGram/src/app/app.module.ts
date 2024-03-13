@@ -17,6 +17,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import {MatCardModule} from '@angular/material/card';
     AboutComponent,
     HomeComponent,
     PostFormComponent,
-    NewPostComponent
+    NewPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,10 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 
   ],
   providers: [],
