@@ -19,6 +19,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewDialogComponent } from './components/new-dialog/new-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     PostFormComponent,
     NewPostComponent,
+    NewDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatDialogModule,
 
   ],
   providers: [],
